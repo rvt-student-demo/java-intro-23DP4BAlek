@@ -9,6 +9,7 @@ public class App
         
     
             Scanner scanner = new Scanner(System.in);
+
             int value = Integer.valueOf(scanner.nextLine());
             
             if (value < 0) {
@@ -25,7 +26,7 @@ public class App
                 System.out.println("4");
             } else if (value <= 100) {
                 System.out.println("5");
-            } else if (value > 100); {
+            } else if (value > 100) {
                 System.out.println("Incredible!");
             }
         
