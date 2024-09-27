@@ -10,26 +10,31 @@ public class App
     
             Scanner scanner = new Scanner(System.in);
 
-            int value = Integer.valueOf(scanner.nextLine());
+            Integer value = Integer.valueOf(scanner.nextLine());
             
-            if (value < 0) {
-                System.out.println("impossible");
-            } else if (value <= 49) {
-                System.out.println("failed");
-            } else if (value <= 59) {  
-                System.out.println("1");
-            } else if (value <= 69) {
-                System.out.println("2");
-            } else if (value <= 79) {
-                System.out.println("3"); 
-            } else if (value <= 89) {
-                System.out.println("4");
-            } else if (value <= 100) {
-                System.out.println("5");
-            } else if (value > 100) {
-                System.out.println("Incredible!");
+            if (value <= 5000) {
+                System.out.println("No tax!");
+            } else if (value <= 25000) {
+                double result = (100 + (value - 5000) * 0.08); 
+                double resultAsD = (double) result;
+                System.out.println(resultAsD);
+            } else if (value <= 55000) {
+                double result = (1700 + (value - 25000) * 0.1); 
+                double resultAsD = (double) result;
+                System.out.println(resultAsD);
+            } else if (value <= 200000) {
+                double result = (4700 + (value - 55000) * 0.12);
+                double resultAsD = (double) result;
+            System.out.println(resultAsD);
+            } else if (value <= 1000000) {
+                double result = (22100 + (value - 200000) * 0.15);
+                double resultAsD = (double) result;
+            System.out.println(resultAsD);
+            } else if (value > 1000000) {
+                double result = (142100 + (value - 1000000) * 0.17);
+                double resultAsD = (double) result;
+            System.out.println(resultAsD);
             }
-        
   // Make your Hello World programm!
     }
 }
