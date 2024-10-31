@@ -1,5 +1,6 @@
 package lv.rvt;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class App 
@@ -7,39 +8,28 @@ public class App
     
 
         
-        public static void christmasTree(int height) {
+        public static void main( String[] args ) {
+            int[] val0 = {0, 1, 2, 3}; 
+
+            int sum = 0;
+            for(int i = 0; i < val0.length; i++) {
+                sum += val0[i];
+            } 
+            System.out.println( "Sum of all numbers = " + sum );
             
-            for (int i = 1; i <= height; i++) {
-                printSpaces(height - i);
-                printStars(2 * i + 1);
-                System.out.println();
+            int[] val = {13, -4, 82, 17}; 
+            int[] twice;
+            System.out.println( "Original Array: " 
+            + val[0] + " " + val[1] + " " + val[2] + " " + val[3] );
+            twice = new int[val.length];
+            for (int i = 0; i < val.length; i++) {
+                twice[i] = 2 * val[i];
+
             }
-    
-            
-            for (int i = 0; i < 2; i++) {
-                printSpaces(height - 1);
-                printStars(3);
-                System.out.println();
-            }
-        }
-    
-        
-        private static void printSpaces(int count) {
-            for (int i = 0; i < count; i++) {
-                System.out.print(" ");
-            }
-        }
-    
-        
-        private static void printStars(int count) {
-            for (int i = 0; i < count; i++) {
-                System.out.print("*");
-            }
-        }
-    
-        
-        public static void main(String[] args) {
-            christmasTree(15);  
-        
+
+            System.out.println(
+                Arrays.toString(twice)
+            );
+
     }
 }
