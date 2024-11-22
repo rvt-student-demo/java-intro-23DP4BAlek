@@ -5,21 +5,19 @@ import java.util.Scanner;
 
 public class App {
 
-    public static void main(String[] args) {
-       
-        Timer timer = new Timer();
+    public class MainProgram {
 
-        while (true) {
-            System.out.println(timer);
-            timer.advance();
-
-            try {
-                Thread.sleep(10);
-            } catch (Exception e) {
-
-            }
+        public static void main(String[] args) {
+            // Test your class here
+            Product tapeMeasure = new Product("Tape measure");
+            Product plaster = new Product("Plaster", "home improvement section");
+            Product tyre = new Product("Tyre", 5);
+    
+            System.out.println(tapeMeasure);
+            System.out.println(plaster);
+            System.out.println(tyre);
         }
-
     }
+    
 }
 
